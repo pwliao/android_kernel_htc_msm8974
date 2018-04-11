@@ -69,6 +69,12 @@ else ifeq ($(CONFIG_MACH_M8_DUG), y)
 	dtb-$(CONFIG_ARCH_MSM8974)	+= msm8974pro-ab-pm8941-m8dug.dtb
 	dtb-$(CONFIG_ARCH_MSM8974)	+= msm8974pro-ab-pm8941-m8dug-xb.dtb
 	dtb-$(CONFIG_ARCH_MSM8974)	+= msm8974pro-ab-pm8941-m8dug-xc.dtb
+else ifeq ($(CONFIG_MACH_MEC_DWG)$(CONFIG_MACH_MEC_UL)$(CONFIG_MACH_MEC_TL)$(CONFIG_MACH_MEC_DUG)$(CONFIG_MACH_MEC_WHL), y)
+	dtb-$(CONFIG_ARCH_MSM8974)  += msm8974pro-ab-pm8941-mecul.dtb
+	dtb-$(CONFIG_ARCH_MSM8974)  += msm8974pro-ab-pm8941-mecdwg.dtb
+	dtb-$(CONFIG_ARCH_MSM8974)  += msm8974pro-ab-pm8941-mectl.dtb
+	dtb-$(CONFIG_ARCH_MSM8974)  += msm8974pro-ab-pm8941-mecdug.dtb
+	dtb-$(CONFIG_ARCH_MSM8974)  += msm8974pro-ab-pm8941-mecwhl.dtb
 else
 	dtb-$(CONFIG_ARCH_MSM8974)	+= msm8974-v1-cdp.dtb
 	dtb-$(CONFIG_ARCH_MSM8974)	+= msm8974-v1-fluid.dtb
