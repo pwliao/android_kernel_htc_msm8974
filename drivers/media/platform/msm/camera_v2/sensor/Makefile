@@ -6,6 +6,7 @@ ccflags-y += -Idrivers/media/platform/msm/camera_v2/sensor/cci
 ccflags-y += -Idrivers/media/platform/msm/camera_v2/yushanII
 obj-$(CONFIG_MSMB_CAMERA) += cci/ io/ csiphy/ csid/ actuator/ flash/ eeprom/
 obj-$(CONFIG_MSM_CAMERA_SENSOR) += msm_sensor.o
+obj-$(CONFIG_OV13850) += ov13850.o
 obj-$(CONFIG_S5K5E_TWOLANE) += s5k5e2_twolane.o
 obj-$(CONFIG_IMX134) += imx134.o
 obj-$(CONFIG_OV8825) += ov8825.o

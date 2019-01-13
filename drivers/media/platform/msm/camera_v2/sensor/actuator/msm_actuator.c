@@ -1237,12 +1237,6 @@ static void msm_actuator_parse_i2c_params(struct msm_actuator_ctrl_t *a_ctrl,
 		}
 	} else {
 #endif
-	if (i2c_tbl == NULL){
-		pr_err("i2c_tbl is NULL a_ctrl %p subdev_id %d",a_ctrl, a_ctrl->pdev->id);
-		return;
-	}
-	CDBG("Enter\n");
-
 	if (a_ctrl == NULL) {
 		pr_err("failed. actuator ctrl is NULL");
 		return;
@@ -1251,6 +1245,12 @@ static void msm_actuator_parse_i2c_params(struct msm_actuator_ctrl_t *a_ctrl,
 	size = a_ctrl->reg_tbl_size;
 	write_arr = a_ctrl->reg_tbl;
 	i2c_tbl = a_ctrl->i2c_reg_tbl;
+
+	if (i2c_tbl == NULL){
+		pr_err("i2c_tbl is NULL a_ctrl %p subdev_id %d",a_ctrl, a_ctrl->pdev->id);
+		return;
+	}
+	CDBG("Enter\n");
 
 	for (i = 0; i < size; i++) {
 		if (write_arr[i].reg_write_type == MSM_ACTUATOR_WRITE_DAC) {

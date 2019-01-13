@@ -3247,3 +3247,33 @@ config KERNEL_TEXT_MPU_PROT
           sections early in boot. Read access is permitted to
           all masters; Write access is only permited to the
           secure world.
+
+config MACH_MEC_UL
+        depends on ARCH_MSM8974
+        bool "MSM8974 MEC_UL"
+        help
+          Support for HTC MSM8974 MEC_UL
+
+config MACH_MEC_DWG
+        depends on ARCH_MSM8974
+        bool "MSM8974 MEC_DWG"
+        help
+          Support for HTC MSM8974 MEC_DWG
+
+config MACH_MEC_DUG
+        depends on ARCH_MSM8974
+        bool "MSM8974 MEC_DUG"
+        help
+          Support for HTC MSM8974 MEC_DUG
+
+config MACH_MEC_TL
+        depends on ARCH_MSM8974
+        bool "MSM8974 MEC_TL"
+        help
+          Support for HTC MSM8974 MEC_TL
+
+config MACH_MEC_WHL
+        depends on ARCH_MSM8974
+        bool "MSM8974 MEC_WHL"
+        help
+          Support for HTC MSM8974 MEC_WHL
