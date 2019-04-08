@@ -401,7 +401,7 @@ static void __msm_power_off(int lower_pshold)
 	gpio_set_value(TP_RST, 0);
 	msleep(10);
 
-	force_disable_PMICGPIO34();
+	// force_disable_PMICGPIO34();
 	msleep(10);
 
 	gpio_tlmm_config(GPIO_CFG(SRIO_1V8_EN, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA), GPIO_CFG_ENABLE);
